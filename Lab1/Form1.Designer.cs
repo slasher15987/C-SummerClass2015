@@ -37,7 +37,7 @@
             this.txtSubtotal = new System.Windows.Forms.TextBox();
             this.txtDiscountPercent = new System.Windows.Forms.TextBox();
             this.txtDiscountAmount = new System.Windows.Forms.TextBox();
-            this.totalB = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCalculate
@@ -45,9 +45,10 @@
             this.btnCalculate.Location = new System.Drawing.Point(32, 217);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(75, 23);
-            this.btnCalculate.TabIndex = 0;
-            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.TabIndex = 2;
+            this.btnCalculate.Text = "&Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // btnExit
             // 
@@ -55,9 +56,10 @@
             this.btnExit.Location = new System.Drawing.Point(176, 217);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.Text = "Exit";
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -122,13 +124,16 @@
             this.txtDiscountAmount.ReadOnly = true;
             this.txtDiscountAmount.Size = new System.Drawing.Size(100, 20);
             this.txtDiscountAmount.TabIndex = 8;
+            this.txtDiscountAmount.TabStop = false;
             // 
-            // totalB
+            // txtTotal
             // 
-            this.totalB.Location = new System.Drawing.Point(166, 153);
-            this.totalB.Name = "totalB";
-            this.totalB.Size = new System.Drawing.Size(100, 20);
-            this.totalB.TabIndex = 9;
+            this.txtTotal.Location = new System.Drawing.Point(166, 153);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(100, 20);
+            this.txtTotal.TabIndex = 9;
+            this.txtTotal.TabStop = false;
             // 
             // Form1
             // 
@@ -137,7 +142,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.totalB);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtDiscountAmount);
             this.Controls.Add(this.txtDiscountPercent);
             this.Controls.Add(this.txtSubtotal);
@@ -166,7 +171,7 @@
         private System.Windows.Forms.TextBox txtSubtotal;
         private System.Windows.Forms.TextBox txtDiscountPercent;
         private System.Windows.Forms.TextBox txtDiscountAmount;
-        private System.Windows.Forms.TextBox totalB;
+        private System.Windows.Forms.TextBox txtTotal;
     }
 }
 
