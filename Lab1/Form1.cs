@@ -22,6 +22,8 @@ namespace Lab1
             decimal subtotal = Convert.ToDecimal(txtSubtotal.Text);
             decimal discountPercent = 0m;
 
+            /* figure the discount based on amount entered in subtotal */
+
             if (subtotal >= 500) 
             {
                 discountPercent = .2m;
